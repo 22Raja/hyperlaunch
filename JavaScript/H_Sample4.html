@@ -1,0 +1,27 @@
+<html>
+<head>
+<script>
+//All the variables that are not explicitly declared are global. 
+//Local variables are created using var inside the function
+total=0;//global
+function sum()
+{
+y=20;//global
+var x=10;//local
+total=x+y;
+}
+function display()
+{
+sum();
+alert(total);
+alert(y);
+//alert(x);//error
+}
+</script>
+</head>
+<body>
+<script language="javascript">
+display();
+</script>
+</body>
+</html>

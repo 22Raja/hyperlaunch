@@ -1,0 +1,102 @@
+<!--
+JavaScript is an object-based scripting language which is lightweight and cross-platform.
+
+JavaScript is not a compiled language, but it is a translated language. The JavaScript Translator (embedded in the browser) is responsible for translating the JavaScript code for the web browser.
+
+JavaScript (js) is a light-weight object-oriented programming language which is used by several websites for scripting the webpages. It is an interpreted, full-fledged programming language that enables dynamic interactivity on websites when applied to an HTML document.
+
+There are following features of JavaScript:
+
+--All popular web browsers support JavaScript as they provide built-in execution environments.
+--JavaScript follows the syntax and structure of the C programming language. Thus, it is a structured programming language.
+--JavaScript is a weakly typed language, where certain types are implicitly cast (depending on the operation).
+--JavaScript is an object-oriented programming language that uses prototypes rather than using classes for inheritance.
+--It is a light-weighted and interpreted language.
+--It is a case-sensitive language.
+--JavaScript is supportable in several operating systems including, Windows, macOS, etc.
+--It provides good control to the users over the web browsers.
+
+
+JavaScript is used to create interactive websites. It is mainly used for:
+
+--****************************Client-side validation,
+--Dynamic drop-down menus,
+--Displaying date and time,
+--Displaying pop-up windows and dialog boxes (like an alert dialog box, confirm dialog box and prompt dialog box),
+--Displaying clocks etc.
+
+3 Places to put JavaScript code:::
+
+--Between the body tag of html
+--Between the head tag of html
+--In .js file (external javaScript)
+
+When an HTML document is loaded into a browser window, then it becomes a ""document object"". The document object stores the elements of an HTML document, such as HTML, HEAD, BODY, and other HTML tags as objects.
+
+-->
+
+<body>
+<script language="javascript">
+//Printing
+document.write("Hello");//objectname.methodname or functionname
+/*
+Author:Karpagam
+MONTH:AUG
+*/
+document.write("<font color=red><i>hello</i></font>");//embedding html tag in javascript
+salary=32000;
+name="devi";
+eno="Chennai";
+document.write("<p>"+salary+ " "+name + " "+eno);
+
+time123 = new Date();//built in class---Date Object
+time1 = time123.getHours();
+document.write("<p>Time: "+time123);
+document.write("<p>Hour: "+time1);
+if (time1 < 10) 
+{
+  document.write("<p>Good morning");
+}
+else
+{
+ document.write("<p>Good Noon");
+}
+switch(time1)
+{
+case 24:
+	document.write("24");
+	break;
+case 23:
+	document.write("23");
+	break;
+default:
+	document.write("<p>Invalid");
+
+}
+i=0;
+while (i<=5)
+{
+document.write("<p>"+i);
+i++;
+}
+i = 22;
+do
+{
+document.write("<p>"+i);
+i++;
+}while (i <= 25)
+for(i=30;i<=35;i++)
+{
+document.write("<p>"+i);
+}
+
+//window object is the default object in javascript
+alert("hello");
+window.alert("bye");//window object!!!
+alert("34"==34);
+alert(10*"55");
+alert(1==true);
+alert(1=="true");//false
+
+</script>
+</body>

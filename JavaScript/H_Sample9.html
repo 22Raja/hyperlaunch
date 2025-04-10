@@ -1,0 +1,161 @@
+<script language="javascript">
+//Array are objects in javascript
+//new keyword is used to create instance of array.
+var mycars = new Array();//dynamic array
+mycars[0] = "Saab";
+mycars[1] = "Volvo";
+mycars[2] = "BMW";
+
+var lang = new Array(2);//only 2 values are allowed
+lang[0] = "Java";
+lang[1] = "J2EE";
+
+for (i=0;i<mycars.length;i++)
+{
+document.write("   "+mycars[i]);
+}
+document.write("<br/>");
+
+
+/*
+for (variablename in object) 
+{
+statement or block to execute
+}
+*/
+/*
+iterable objects, which includes Map, Array, arguments, 
+for (variablename of iterable)
+{
+statement or block to execute
+}
+*/
+//for each loop
+for(x in lang)
+{
+document.writeln(lang[x]);
+}
+document.write("<br/>");
+
+
+//push()to automatically adds elements to the end of the array
+tour=new Array("mysore","coorg","ooty","kerela");//Array Initialization
+tour.push("moonar");
+tour.push("goa");
+//unshift to automatically adds elements to the beginning of the array
+tour.unshift("bangalore");
+for (x in tour)
+{
+document.writeln(tour[x]);
+}
+
+document.write("<br/>");
+//pop() to remove element from the end of the array 
+tour.pop();
+//shift() to remove element from the beginning of the array
+tour.shift();
+for (x in tour)
+{
+document.writeln(tour[x]);
+}
+
+var parents = ["Devi", "Daya"];//array literal. No new keyword. Good!!
+var children = ["Karpagam", "Raja"];
+var family = parents.concat(children);
+document.write("<p>"+family);
+document.write("<p>Sort: "+family.sort());
+
+/*
+Allows adding/removing from any index position
+splice(indexposition, numberOfItemsToDelete,[item(s) to be added]
+*/
+
+nums=new Array(3,4,5,6);
+nums.splice(2,1,1000);//modify
+document.write("<p>Splice: "+nums);
+
+var nums1=new Array(3,4,5,6);
+nums1.splice(1,2);//delete
+document.write("<p>Splice: "+nums1);
+
+nums2=new Array(3,4,5,6);
+nums2.splice(1,2,11,12,13);
+document.write("<p>Splice: "+nums2);
+
+var days = ["Monday", "Tuesday", "Wednesday", "Thursday"];//index starts from 0
+var lastday11 = days[days.length-1];//4-1--length starts from 1!
+document.write("<p>Last Array Value::"+lastday11);
+
+
+document.write("<p>");
+//"of" keyword not works with new Array();
+//"in" keyword works for new Array();
+for(a of days)//array literal 
+{
+   document.write("    "+a);
+}
+
+document.write("<p>");
+for(b in days) 
+{
+   document.write("    "+b);
+}
+
+
+/*
+JavaScript does not support arrays with named indexes.
+
+In JavaScript, arrays always use numbered indexes.  
+*/
+var person = [];//empty array literal
+person[0] = "Devi";
+person[1] = "Abi";
+person[2] = 2020;
+person[3] = "Thananya";
+//person["Name"] = "Abi";//undefined ,invalid
+
+document.write("<p>Array Values::: "+person[0]+ "   "+person[2]+ " Array Length:::   "+person.length);
+
+/*
+the typeof operator returns the data type of its operand in the form of a string. 
+The possible types that exists in javascript are:
+
+undefined
+Object
+boolean
+number
+string
+symbol
+function
+*/
+
+document.write("<p>typeof operator::"+typeof 25); 
+document.write("<p>typeof operator::"+typeof "Devi"); 
+document.write("<p>typeof operator::"+typeof person);
+document.write("<p>typeof operator::"+typeof days);
+document.write("<p>typeof operator::"+typeof(lang));
+document.write("<p>Strict Comparison:::"+(typeof 69 === 'number')); 
+document.write("<p>Strict Comparison:::"+(typeof true === 'boolean')); 
+
+/*
+The instanceof operator in JavaScript is used to check the type of an object at run time. It returns a boolean value if true then it indicates that the object is an instance of a particular class and if false then it is not.
+
+objectName instanceof objectType
+*/
+document.write("<p>instanceof operator::"+(person instanceof Array)); //t 
+document.write("<p>instanceof operator::"+(person instanceof Object));//t
+document.write("<p>instanceof operator::"+(person instanceof String));//F
+
+/*
+The instanceof operator tests to see if the prototype property of a constructor appears anywhere in the prototype chain of an object. 
+*/
+//document.write("<p>instanceof operator::"+(person instanceof Math));//F new Math(45,43,5,34);//not working
+ 
+var myDate = new Date(); 
+document.write("<p>instanceof operator::"+(myDate instanceof String));//F
+document.write("<p>instanceof operator::"+(myDate instanceof Date));//t
+document.write("<p>instanceof operator::"+(myDate instanceof Object));//t
+
+
+
+</script>

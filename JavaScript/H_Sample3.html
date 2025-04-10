@@ -1,0 +1,36 @@
+<head>
+<script language="javascript">
+/*
+Window::alert,confirm,prompt
+The “var” keyword is used to declare a var type variable. The var type variable can be used to store a simple data type, a complex type, an anonymous type, or a user-defined type.
+
+*/
+function show1()
+{
+var r=window.confirm("Are you going to take up the test?");//here var keyword is optional!
+if (r==true)
+  {
+  alert("Yes");
+  }
+else
+  {
+  alert("No!Need some more time!");
+  }
+}
+function show2()
+{
+name=window.prompt("Please enter your name","Karpagam");//inputbox
+if (name!=null && name!="")
+{
+  alert("Hello " + name + "! How are you today?");
+}
+}
+</script>
+</head>
+
+<body>
+
+<input type="button" onclick="show1()" value="Show a confirm box">
+<input type="button" onclick="show2()" value="Show prompt box">
+
+</body>

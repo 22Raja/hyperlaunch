@@ -1,0 +1,51 @@
+<!--
+Event::
+
+Javascript has events to provide a dynamic interface to a webpage. 
+
+onclick
+ondblclick
+onmouseover
+onmouseout
+onmousedown
+onmouseup
+onkeydown & onkeyup
+onfocus
+onsubmit
+onblur
+onchange 
+-->
+
+<head>
+<script>
+function dis()
+{
+window.alert("Hello World!!!!!!!!!");
+}
+function fun1(a)// a is a variable!
+{
+alert(a);
+}
+
+function my1()
+{
+return "Hello Javascript!";
+}
+function mul(a,b)
+{
+return a*b;
+}
+
+</script>
+</head>
+
+<body>
+<input type="button" value="Click me!" ondblclick="dis()">
+<input type="button" value="Call" onclick="fun1('Hello')" >
+<script>
+dis();
+document.write("<h1>"+my1())
+document.write("<h1>"+mul(4,3));
+</script>
+
+</body>

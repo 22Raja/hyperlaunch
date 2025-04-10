@@ -1,0 +1,31 @@
+<script> 
+//non arrow function
+function func1() 
+{
+ return (5 * 9);
+ } 
+
+console.log("Non Arrow Function::: "+func1()); 
+// console.error() method -red color 
+console.error('This is a simple error');  
+// console.warn() method  -yellow color
+console.warn('This is a warning.');  
+/*
+Arrow Function::::
+
+By using arrow functions, we avoid having to type the function 
+keyword, return keyword (it’s implicit in arrow functions), and curly brackets.
+
+(param1, param2, paramN) => expression
+
+Writing into the browser console, using console.log().
+*/
+
+
+display=()=>alert("Iam arrow function");
+display();//calling the function display()
+
+mul=(x,y)=>x*y;
+console.log("Arrow Function:"+mul(12,12));
+
+</script>
