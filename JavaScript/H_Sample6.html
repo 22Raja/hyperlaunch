@@ -1,0 +1,46 @@
+<html>
+<body>
+<script language="javascript">
+//String Object and Date objects
+txt = new String("Hello World!");
+txt1="Java";
+txt2="Script";
+
+document.write("<p>Length: "+txt.length);//String Object.length
+document.write("<p>Big: " + txt.big());
+document.write("<p>Small: " + txt.small());
+document.write("<p>CharAt: " + txt.charAt(1));//extract a character in 1st position
+var txt3=txt1.concat(txt2);
+document.write("<p>Concat: " +txt3);
+document.write("<p>Bold: " + txt.bold());//<b>
+document.write("<p>Italic: " + txt.italics());
+document.write("<p>Index of: "+txt.indexOf("World"));
+var str1 = new String( "This is string one and again string" );
+document.write("<p>Last Index of: "+str1.lastIndexOf("string"));//backward searching
+document.write("<p>Split: "+str1.split(" ",4));
+document.write("<p>Fixed: " + txt.fixed());
+document.write("<p>Strike: " + txt.strike());
+
+
+document.write("<p>Fontcolor: " + txt.fontcolor("red"));
+document.write("<p>Fontsize: " + txt.fontsize(6));
+document.write("<p>Subscript: " + txt.sub());
+document.write("<p>Superscript: " + txt.sup());
+document.write("<p>Link: " + txt.link("https://www.zoho.com"));//<a>
+
+
+var d=new Date();//current system date
+var h=d.getHours();
+var m=d.getMinutes();
+var s=d.getSeconds();
+document.write("<p>Date: "+d);
+document.write("<p>Hours: "+h);
+document.write("<p>Minutes: "+m);
+document.write("<p>Seconds: "+s);
+document.write("<p>Date: " +d.getDay() + " "+d.getMonth()+ " " +d.getYear());
+ var dt = new Date( "01/22/2012 12:34:55" );
+   dt.setDate( 24 );//modify the configured date
+   document.write("<p>Setdate: "+ dt ); 
+
+
+</script>

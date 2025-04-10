@@ -1,0 +1,73 @@
+<!--
+The controls attribute adds video controls, like play, pause, and volume.
+
+It is a good idea to always include width and height attributes. 
+If height and width are not set, the page might flicker while the video loads.
+
+The <source> element allows you to specify alternative video files which the 
+browser may choose from. The browser will use the first recognized format.
+
+The text between the <video> and </video> tags will only be displayed in browsers 
+that do not support the <video> element.
+
+Add muted after autoplay to let your video start playing automatically (but muted):
+File Format	Media Type
+MP4		video/mp4
+WebM		video/webm
+Ogg		video/ogg
+
+Only MP4, WebM, and Ogg video are supported by the HTML standard.
+-->
+
+<html>
+<body>
+<video width="320" height="240" controls autoplay muted>
+   <source src="http://techslides.com/demos/sample-videos/small.ogv" type="video/ogg">
+ Your browser does not support HTML video.
+</video>
+
+<!-- The <object> element is supported by all browsers.
+
+The <object> element defines an embedded object within an HTML document.
+
+It was designed to embed plug-ins (like Java applets, PDF readers, and Flash Players) in web pages, but can also be used to include HTML in HTML:
+-->
+<object data="myimages/LightHouse.jpg"></object>
+<br><br>
+<!-- The <embed> element is supported in all major browsers.
+
+The <embed> element also defines an embedded object within an HTML document.
+
+Web browsers have supported the <embed> element for a long time. However, it has not been a part of the HTML specification before HTML5.
+-->
+<embed src="myimages/rose1.jpg">
+<br>
+<br>
+
+<!-- The YouTube URL in src must have and use the embed endpoint instead of watch, so for instance 
+let s say you want to embed this YouTube video: https://www.youtube.com/watch?v=P6N9782MzFQ (browser's URL).
+
+You should use the embed endpoint, so the URL now should be something like https://www.youtube.com/embed/P6N9782MzFQ. 
+Use this value as the URL in the src attribute inside the iframe tag in your HTML code
+
+Add mute=1 after autoplay=1 to let your video start playing automatically (but muted).
+
+Add loop=1 to let your video loop forever.
+
+Value 0 (default): The video will play only once.
+
+Value 1: The video will loop (forever).
+
+Add controls=0 to not display controls in the video player.
+
+Value 0: Player controls does not display.
+
+Value 1 (default): Player controls display.
+
+-->
+<iframe width="420" height="315" src="https://www.youtube.com/embed/mC5pZtbVGa0?autoplay=1&mute=1">
+</iframe>
+
+
+</body>
+</html>

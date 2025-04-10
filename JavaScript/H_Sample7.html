@@ -1,0 +1,28 @@
+<script>
+/*
+
+If a function is called with too many arguments (more than declared), these arguments can be reached 
+using the arguments object.
+
+JavaScript functions have a special property called arguments, which contains an"" array of input parameters"""". 
+Using the  
+"length" property of an array, you can iterate through the array for each parameter. 
+This enables you to develop  
+functions that can change as their parameters do. 
+*/
+function calcAverage()
+{
+document.write("<p>Length: "+arguments.length);
+ var sum = 0;
+   for(var i=0; i<arguments.length; i++)
+      sum = sum + arguments[i];
+     return sum;
+}
+</script>
+<body text=blue>
+<script>
+document.write("<p>Sum = " + calcAverage(1,2,3));//3 args
+document.write("<p>Sum = " + calcAverage());//0 args
+document.write("<p>Sum = " + calcAverage(12,456,76,345,7,34,65,76,878,3));//10args
+</script>
+</body>

@@ -1,0 +1,51 @@
+<script language="javascript">
+document.write("Round: "+Math.round(2.5));
+document.write("Round: "+Math.round(2.2));
+document.writeln("Random:"+Math.random());
+document.writeln("Random:"+(Math.random()*11));
+document.writeln("Max: "+Math.max(45,76,23));
+document.writeln("Min: "+Math.min(37,94,87));
+document.writeln("PI: "+Math.PI);
+document.write("Pow: "+Math.pow(2,3));
+document.write("SQRT: "+Math.sqrt(81));
+
+//The isNaN() function determines whether a value is an illegal number (Not-a-Number).
+//This function returns true if the value is NaN, and false if not.
+document.write("<br><br><br>"+isNaN(123)+ "<br />");
+document.write(isNaN(-1.23)+ "<br />");
+document.write(isNaN(5-2)+ "<br />");
+document.write(isNaN(0)+ "<br />");
+document.write(isNaN("Hello")+ "<br />");
+document.write(isNaN("2005/12/12")+ "<br />");
+
+
+// 	=== and !== are used for stricter comparisons based on types.
+document.write("Strict Equalto: "+(2==='2')+ "<br />");
+document.write("Equalto: "+(true==1)+ "<br />");
+document.write("Strict Equalto: "+(true===1)+ "<br />");
+document.write("Strict Equalto: "+(true===true)+ "<br />");
+
+//it does not take object type into consideration in the comparison.
+document.write("Not Equalto: "+(50!='50')+ "<br />");//false
+document.write("Not Equalto: "+(50!=50)+ "<br />");
+
+document.write("Not Equalto: "+(10!=20)+ "<br />");
+
+/*
+The Javascript strict not equal comparison operator ( !== ) is used to check if the operand on the left is not equal to the  
+operand on the right, as well as evaluating their object types in the comparison. The expression created will then return  
+a value of either "true" or "false" to you.*/
+document.write("Strict Not Equalto: "+(50!=='50')+ "<br />");//true
+
+
+//The parseInt() function parses a string and returns an integer.
+//This methods only //work properly when called on strings; all other types return NaN .
+var iNum1 = parseInt("1234blue"); //returns 1234
+var iNum2 = parseInt("0xA"); //returns 10
+var iNum3 = parseInt("22.5"); //returns 22
+var iNum4 = parseInt("blue"); //returns NaN
+var iNum5 = parseInt("AF", 16); //returns 175
+document.write("<br><br><b>"+iNum1+ " "+iNum2+ " "+iNum3+ " "+iNum4+ " "+iNum5);
+
+
+</script>
