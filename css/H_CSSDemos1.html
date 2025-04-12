@@ -1,0 +1,329 @@
+
+<!--
+CSS:
+CSS is the language we use to style an HTML document.
+CSS describes how HTML elements should be displayed.
+CSS stands for Cascading Style Sheets
+CSS saves a lot of work. It can control the layout of multiple web pages all at once
+External stylesheets are stored in CSS files
+A CSS rule consists of a selector TAG and a declaration block.
+
+Types of selector::
+1.class selector
+2.group selector
+3.id selector
+
+EX:
+p 
+{
+  color: red;
+}
+color is a built in css property and red is a built in css value
+Types  of css::
+*inline css(.html)=>SINGLE HTML TAG
+*internal css(.html=>HEAD SECTION)=>SINGLE HTML PAGE
+*external css(.css)->SEPERATE CSS FILE
+
+text-transform:: lowercase,uppercase,captialize,default is none!
+
+dotted - Defines a dotted border
+dashed - Defines a dashed border
+solid - Defines a solid border
+double - Defines a double border
+groove - Defines a 3D grooved border. The effect depends on the border-color value
+ridge - Defines a 3D ridged border. The effect depends on the border-color value
+inset - Defines a 3D inset border. The effect depends on the border-color value
+outset - Defines a 3D outset border. The effect depends on the border-color value
+none - Defines no border
+hidden - Defines a hidden border
+
+-->
+
+<!--
+Unit Description
+% percentage
+in inch
+cm centimeter
+mm millimeter
+em
+1em is equal to the current font size. 2em means 2 times 
+the size of the current font. E.g., if an element is 
+displayed with a font of 12 pt, then '2em' is 24 pt. The 
+'em' is a very useful unit in CSS, since it can adapt 
+automatically to the font that the reader uses
+ex
+one ex is the x-height of a font (x-height is usually about 
+half the font-size)
+pt point (1 pt is the same as 1/72 inch)
+pc pica (1 pc is the same as 12 points)
+px pixels (a dot on the computer screen
+-->
+
+<html>
+
+<head>
+<!--internal css-->
+<!--MIME(Multipurpose Internet Mail Extensions) TYPE:: text/html,text/css,text/script,image/jpeg-->
+<style type="text/css">
+h1
+{
+background-color:yellow;
+text-align:center;
+color:green;
+text-decoration:underline dotted red;
+}
+p 
+{
+  color: red;
+  text-align: center;
+}
+p.cap
+{
+text-transform:capitalize;
+border:7px dotted red;
+}
+p.cap1
+{
+text-transform:uppercase;
+word-spacing:30px;
+font-family:monotype corsiva;
+font-size:50;
+}
+
+
+ul.a 
+{
+list-style-image:url('myimages/rose1.jpg');
+list-style-type:disc;
+}
+ul.b 
+{
+list-style-type:circle;
+}
+ul.c 
+{
+list-style-type:square;
+}
+ul.d 
+{
+list-style-type:none;
+}
+ol.e 
+{
+list-style-type:decimal;
+}
+ol.g 
+{
+list-style-type:lower-roman;
+}
+ol.h
+{
+list-style-type:lower-alpha;
+}
+
+h2,h3
+{
+color:cornflowerblue;
+}
+
+h3.hid
+{
+visibility:hidden;
+}
+h3.hid1
+{
+display:none;
+}
+
+
+#mycssstyle1
+{
+text-transform:uppercase;
+color:cornflowerblue;
+}
+
+
+.example 
+{    
+    text-align: center;    
+    color: red;    
+    font-size: 1cm;  
+}    
+.para
+{  
+font-family: Lucida Calligraphy;  
+text-shadow: 5px 8px 9px yellow;  
+}
+
+#a
+{
+color:green;
+}
+#b
+{
+text-align:center;
+}  
+
+div
+ {
+  border: 10px dotted black;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+  background-color: lightblue;
+}
+#customers 
+{
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th 
+{
+  border: 1px dotted red;
+  padding: 18px;
+}
+
+#customers tr:nth-child(even)
+{
+background-color: orange;
+}
+
+#customers tr:hover 
+{
+background-color:pink;
+}
+
+#customers th 
+{
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+
+</style>
+</head>
+
+<body>
+<h1>My CSS web page!</h1>
+<h1>My CSS web page!</h1>
+<p>Good Afternoon to all!</p>
+
+<!-- class selector(.)-->
+<p class="cap">my css another web page</p>
+<p class="cap1">my css web page</p>
+
+<p>Good Day to all!</p>
+<h1 class="cap1">my another class selector</h1>
+
+<ul class="a">
+<li>Java</li>
+</ul>
+<ul class="b">
+<li>Java</li>
+</ul>
+<ul class="c">
+<li>Java</li>
+</ul>
+<ul class="d">
+<li>Java</li>
+</ul>
+<ol class="e">
+<li>Java</li>
+</ol>
+<ol class="g">
+<li>Java</li>
+</ol>
+<ol class="h">
+<li>Java</li>
+</ol>
+
+<h2>My CSS</h2>
+<h3>My CSS</h3>
+
+<!-- visibility:hidden- It is not visible but gets up it's original space whereas, 
+display:none- It is hidden and takes no space.-->
+<h3>This is a visible heading</h3>
+<h3 class="hid">Iam Hidden Header</h3>
+<h3>Next</h3>
+
+<h3>This is a visible heading</h3>
+<h3 class="hid1">Iam Hidden Header</h3>
+<h3>Next</h3>
+
+<!-- id selector #-->
+<p id="mycssstyle1">Hello</p>
+<h1 id="mycssstyle1">Hello</h1>
+<br><br>
+
+<br><br>
+
+<br><br>
+<!--it is best practice to only use IDs if you want a style to apply to one 
+element on the web page, and to use classes if you want a style to apply to multiple elements. -->
+<h4 class="example para">This paragraph is red and center-aligned with a font-family "Lucida Calligraphy" and text-shadow.</p>    
+
+<br><br>
+<h5 id="a">Java Oracle Angular Framework</h1>
+
+<div>This div element has a top margin of 100px, a right margin of 150px, a bottom margin of 100px, and a left margin of 80px.</div>
+
+<table id="customers">
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>ZOHO</td>
+    <td>9789962180</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>APPLE</td>
+    <td>1800-454-3434</td>
+    <td>Sweden</td>
+  </tr>
+  <tr>
+    <td>Mindtree</td>
+    <td>1835-565-3434</td>
+    <td>Mexico</td>
+  </tr>
+  <tr>
+    <td>DXC</td>
+    <td>3423-454-3432</td>
+    <td>Austria</td>
+  </tr>
+</table>
+
+<!--inline css contains more priority!-->
+
+
+
+<p style="background:lightgreen; color:yellow;">A new background and
+ font color with inline CSS</p>
+
+
+<!--
+ Pixels:
+       If you use pixels then, its an absolute measurement and will be rendered 
+irrespective of the browser's window size. 
+Percentage:
+       Percentage is a relative measurement which will be rendered with respect to the
+ browser's window size. 
+Note:
+If you want to show some element to always appear in a fixed size, then use pixels, 
+else use percentage. 
+
+Pixel is a static measurement, while percent and EM are relative measurements. 
+Percent depends on its parent font size. EM is relative to the current font size of the 
+element (2em means 2 times the size of the current font).
+-->
+
+</body>
+</html>

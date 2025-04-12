@@ -1,0 +1,92 @@
+<!--
+Bootstrap Forms:::
+Bootstrap provides three types of form layouts:
+
+Vertical form (this is default)
+Horizontal form--A horizontal form means that the labels are aligned next to the input field (horizontal) on large and medium screens.
+Inline form--In an inline form, all of the elements are inline, left-aligned, and the labels are alongside.
+Standard rules for all three form layouts:
+
+Wrap labels and form controls in <div class="form-group"> (needed for optimum spacing)
+Add class .form-control to all textual <input>, <textarea>, and <select> elements
+-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!--You can also create horizontal form layouts where labels and form controls are aligned side-by-side using the Bootstrap grid classes. To create a horizontal form layout add the class .row on form groups and use the .col-*-* grid classes to specify the width of your labels and controls.
+
+Also, be sure to apply the class .col-form-label on the <label> elements, so that they're vertically centered with their associated form controls. -->
+<!--col-sm-4 are available for quickly making grid layouts. Columns create gutters (gaps between column content) via padding-->
+ <form action="" method="post">
+        <div class="form-group row">
+            <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-4">
+                <input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Password</label>
+            <div class="col-sm-4">
+                <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-4 offset-sm-2">
+                <label class="form-check-label"><input type="checkbox"> Remember me</label>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-4 offset-sm-2">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </div>
+    </form>
+<!--bootstrap has more classes for margin including: mt- = margin-top mb- = margin-bottom ml- = margin-left mr- = margin-right-->
+ <form>
+        <h4>Choose your favorite Hobbies</h4>  
+        <div class="form-group">
+            <label class="d-inline-block">
+                <input type="checkbox" class="mr-1" name="hobbies"> Shopping
+            </label>
+            <label class="d-inline-block">
+                <input type="checkbox" class="mr-1" name="hobbies"> Cricket
+            </label>
+            <label class="d-inline-block">
+                <input type="checkbox" class="mr-1" name="hobbies"> SocialMedia
+            </label>
+        </div>
+        <hr>
+        <h4>Choose your gender</h4>
+        <div class="form-group">
+            <label class="d-block">
+                <input type="radio" class="mr-1" name="gender"> Male
+            </label>
+            <label class="d-block">
+                <input type="radio" class="mr-1" name="gender"> Female
+            </label>
+        </div>
+<div class="col-sm-7">
+            <label for="inputEmail">Email</label>
+            <input type="email" class="form-control is-valid" id="inputEmail" placeholder="Email" required>
+            <div class="valid-feedback">Good! Your email address looks valid.</div>
+        </div>
+        <div class="col-sm-7">
+            <label for="inputPassword">Password</label>
+            <input type="password" class="form-control is-invalid" id="inputPassword" placeholder="Password" required>
+            <div class="invalid-feedback">Opps! You have entered an invalid password.</div>
+        </div>
+    </form>
+<form>
+        <div class="form-group">
+<div class="col-sm-7">
+            <label>Password</label>
+            
+            <input type="password" class="form-control">
+            <small class="form-text text-muted">
+                Your password must be 8-20 characters long but must not contain spaces.
+            </small>
+</div>
+        </div>
+    </form>

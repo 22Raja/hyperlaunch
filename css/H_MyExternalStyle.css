@@ -1,0 +1,44 @@
+/*
+External css: NO STYLE TAG
+*/
+body
+{
+ background-color: cornflowerblue;
+} 
+p#c1 
+{ 
+color: yellow; 
+} 
+h1#c1 
+{ 
+color: blue; 
+}
+h2.c2
+{
+color:red;
+}
+h3.c2
+{
+color:green;
+} 
+h3
+{ 
+color: white; 
+}
+
+h4
+{
+color:orange;
+}	
+i
+{
+color:yellow;
+}
+/*
+DESCENDANT SELECTOR
+*/
+
+p i
+{
+color:cyan; 
+}

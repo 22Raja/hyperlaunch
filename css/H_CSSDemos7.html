@@ -1,0 +1,37 @@
+<!--Here are the states you can change link color for with CSS:
+
+a:hover – when the mouse pointer hovers over it.
+a:active – when a user clicks the link.
+a:visited – visited link.
+
+By default, links have underlines. To remove underline from link with CSS, use the CSS text decoration property.
+
+It has four possible values: underline, overline, line-through, and none.
+-->
+<style>
+/*
+ anchor element signifies unvisited hyperlinks
+*/
+a:link {
+    text-decoration: none;
+color:blue;
+}
+/* A link that has been visited */
+a:visited {
+    text-decoration: none;
+
+}
+/* A link that is hovered on */
+a:hover {
+    color: red;
+    text-decoration: underline;
+}
+/* A link that is selected */
+a:active {
+    color: green;
+}
+
+</style>
+<body>
+<a href="https://www.zoho.com">Zoho Corporation</a>
+</body>

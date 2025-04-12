@@ -1,0 +1,57 @@
+<!--The animation property is a shorthand property for:
+
+animation-name
+animation-duration
+animation-timing-function
+animation-delay
+animation-iteration-count
+animation-direction
+animation-fill-mode
+animation-play-state
+
+Always specify the animation-duration property, otherwise the duration is 0, and will never be played.
+
+animation-timing-function: linear|ease|ease-in|ease-out|ease-in-out|step-start|step-end|steps(int,start|end)|cubic-bezier(n,n,n,n)|initial|inherit;
+animation-iteration-count: number|infinite|initial|inherit;
+animation-direction: normal|reverse|alternate|alternate-reverse|initial|inherit;
+-->
+<style>
+.element 
+{
+  width: 50%;
+  height: 50%;
+  animation: work1 4s infinite;
+}
+/* Each @keyframes at-rule defines what should happen at specific moments during the animation. For example, 0% is the beginning of the animation and 100% is the end*/
+@keyframes work1
+{
+  0% 
+{
+    background-color: lightgreen;
+  }
+25% {
+            top: 50px;
+            background: lightyellow;
+            width: 50px;
+        }
+        50% {
+            top: 100px;
+            background: lightblue;
+            width: 100px;
+        }
+        75% {
+            top: 150px;
+            background: MediumSeaGreen;
+            width: 150px;
+        }
+  100% {
+    background-color: cornflowerblue;
+  }
+}
+
+html,body 
+{
+  height: 100%;
+}
+</style>
+<div class="element"></div>

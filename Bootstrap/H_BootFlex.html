@@ -1,0 +1,112 @@
+<!--Before the Flexbox Layout module, there were four layout modes:
+
+Block, for sections in a webpage
+Inline, for text
+Table, for two-dimensional table data
+Positioned, for explicit position of an element.
+The biggest difference between Bootstrap 3 and Bootstrap 4 is that Bootstrap 4 now uses flexbox, instead of floats, to handle the layout.
+
+The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning. 
+
+m - for classes that set margin, like this :
+
+mt - for classes that set margin-top
+mb - for classes that set margin-bottom
+ml - for classes that set margin-left
+mr - for classes that set margin-right
+mx - for classes that set both margin-left and margin-right
+my - for classes that set both margin-top and margin-bottom
+-->
+
+<!--Flexbox is a new layout mode in CSS3. It describes ways to align and size elements. -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<div class="container mt-2">
+  <h2>Flex</h2>
+  <p>To create a flexbox container and transform direct children into flex items, use the d-flex class:</p>
+  <div class="d-flex p-3 bg-secondary text-white">  
+    <div class="p-2 bg-info">Data 1</div>
+    <div class="p-2 bg-warning">Data  2</div>
+    <div class="p-2 bg-primary">Data 3</div>
+ </div>
+</div>
+
+<div class="container mt-3">
+  <h2>Horizontal Direction</h2>
+  <p>Use .flex-row to make the flex items appear side by side (default):</p>
+  <div class="d-flex flex-row bg-secondary mb-3">
+    <div class="p-2 bg-info">Data 1</div>
+    <div class="p-2 bg-warning">Data 2</div>
+    <div class="p-2 bg-primary">Data 3</div>
+  </div>
+  <p>Use .flex-row-reverse to right-align the direction:</p>
+  <div class="d-flex flex-row-reverse bg-secondary">
+    <div class="p-2 bg-info">Data 1</div>
+    <div class="p-2 bg-warning">Data 2</div>
+    <div class="p-2 bg-primary">Data 3</div>
+  </div>
+</div>
+<div class="container mt-3">
+  <h2>Order</h2>
+  <p>Change the visual order of a specific flex item(s) with the .order classes. Valid classes are from 0 to 12:</p>
+  <div class="d-flex mb-3">
+    <div class="p-2 order-3 bg-info">Data 1</div>
+    <div class="p-2 order-2 bg-warning">Data 2</div>
+    <div class="p-2 order-1 bg-primary">Data 3</div>
+  </div>
+</div>
+
+<div class="container mt-3">
+  <h2>Auto Margins</h2>
+  <p>Easily add auto margins to flex items with .mr-auto (push items to the right), or by using .ml-auto (push items to the left):</p>
+  <div class="d-flex mb-3 bg-secondary">
+    <div class="p-2 mr-auto bg-info">Data  1</div>
+    <div class="p-2 bg-warning">Data  2</div>
+    <div class="p-2 bg-primary">Data  3</div>
+  </div>
+  <div class="d-flex mb-3 bg-secondary">
+    <div class="p-2  bg-info">Data  1</div>
+    <div class="p-2 bg-warning">Data  2</div>
+    <div class="p-2 ml-auto bg-primary">Data  3</div>
+  </div>
+</div>
+<div class="container mt-3">
+  <h2>Wrap</h2>
+  <p>Control how flex items wrap in a flex container with .flex-nowrap (default), .flex-wrap or .flex-wrap-reverse.</p>
+  <p><code>.flex-wrap:</code></p>
+  <div class="d-flex flex-wrap-reverse bg-light">
+    <div class="p-2 border">Data 1</div>
+    <div class="p-2 border">Data 2</div>
+    <div class="p-2 border">Data 3</div>
+    <div class="p-2 border">Data 4</div>
+    <div class="p-2 border">Data 5</div>
+    <div class="p-2 border">Data 6</div>
+    <div class="p-2 border">Data 7</div>
+    <div class="p-2 border">Data 8</div>
+    <div class="p-2 border">Data 9</div>
+    <div class="p-2 border">Data 10</div>
+    <div class="p-2 border">Data 11</div>
+    <div class="p-2 border">Data 12</div>
+    <div class="p-2 border">Data 13 </div>
+    <div class="p-2 border">Data 14</div>
+    <div class="p-2 border">Data 15</div>
+    <div class="p-2 border">Data 1</div>
+    <div class="p-2 border">Data 2</div>
+    <div class="p-2 border">Data 3</div>
+    <div class="p-2 border">Data 4</div>
+    <div class="p-2 border">Data 5</div>
+    <div class="p-2 border">Data 6</div>
+    <div class="p-2 border">Data 7</div>
+    <div class="p-2 border">Data 8</div>
+    <div class="p-2 border">Data 9</div>
+    <div class="p-2 border">Data 10</div>
+    <div class="p-2 border">Data 11</div>
+    <div class="p-2 border">Data 12</div>
+    <div class="p-2 border">Data 13 </div>
+    <div class="p-2 border">Data 14</div>
+    <div class="p-2 border">Data 15</div>
+
+  </div>
+

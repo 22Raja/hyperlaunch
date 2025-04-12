@@ -1,0 +1,82 @@
+<!--
+Display css property::
+ 
+inline	Displays an element as an inline element (like <span>). Any height and width properties will have no effect	
+block	Displays an element as a block element (like <p>). It starts on a new line, and takes up the whole width	
+contents	Makes the container disappear, making the child elements children of the element the next level up in the DOM	
+flex	Displays an element as a block-level flex container	
+grid	Displays an element as a block-level grid container	
+inline-block	Displays an element as an inline-level block container. The element itself is formatted as an inline element, but you can apply height and width values	
+inline-flex	Displays an element as an inline-level flex container	
+inline-grid	Displays an element as an inline-level grid container	
+inline-table	The element is displayed as an inline-level table	
+list-item	Let the element behave like a <li> element	
+run-in	Displays an element as either block or inline, depending on context
+--><body>
+    <div style="text-align: center; color:yellow;">
+      <h1>Form Demo</h1>
+      <h2>Browser Demographics Survey</h2>
+      <form method="post" action="">
+      <div style="display:inline-block; text-align: left;color:green;">
+            <p>
+           <div style="float: left; margin: 2em; width: 10em;">
+               <p><label>As which gender<br />do you identify?</label></p>
+              <select name="gender" id="gender" required>
+                <option value="" selected disabled>Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div style="float: left; margin: 2em; width: 10em; color:orange;">
+              <p><label>To which age group<br />do you belong?</label></p>
+              <select name="age" id="age" required>
+                <option value="" selected disabled>Age group</option>
+                <option value="UN18">Under 18</option>
+                <option value="1825">18-24 years old</option>
+                <option value="2534">25-34 years old</option>
+                <option value="3544">35-44 years old</option>
+                <option value="4554">45-54 years old</option>
+                <option value="5564">55-64 years old</option>
+                <option value="6574">65-74 years old</option>
+                <option value="75OO">75 or over</option>
+              </select>
+            </div>
+          </p>
+          <p>
+            <div style="float: left; margin: 2em; width: 10em;color:violet;">
+              <p><label>In which geographic<br />region do you live?</label></p>
+              <select name="region" id="region" required>
+                <option value="" selected disabled>Region</option>
+                <option value="Africa">Africa</option>
+                <option value="Asia">Asia</option>
+                <option value="Caribbean">Caribbean</option>
+                <option value="CAmerica">Central America</option>
+                <option value="Europe">Europe</option>
+                <option value="NAmerica">North America</option>
+                <option value="Oceania">Oceania</option>
+                <option value="SAmerica">South America</option>
+              </select>
+            </div>
+            <div style="float: left; margin: 2em; width: 10em;color:cornflowerblue;">
+              <p><label>Which Internet web<br />browsers do you use?</label></p>
+              <select name="browser" id="browser" required multiple size="4">
+                <option>Google Chrome</option>
+                <option>Internet Explorer</option>
+                <option>Microsoft Edge</option>
+                <option>Mozilla Firefox</option>
+                <option>Opera</option>
+                <option>Safari</option>
+              </select>
+            </div>
+          </p>
+        </div>
+        <p>
+          <input type="reset" value="Reset" style="margin: 0 2em;" />
+          <input type="submit" value="Submit" style="margin: 0 2em;" />
+        </p>
+      </form>
+    </div>
+
+  </body>
+</html>
