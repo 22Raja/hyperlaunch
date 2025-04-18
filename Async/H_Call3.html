@@ -1,0 +1,25 @@
+<script>
+/*
+. Destructuring is the act of unpacking elements in an array or object.
+
+Destructuring not only allow us to unpack elements, 
+it also gives you the power to manipulate and switch elements you unpacked 
+depending on the type of operation you want to perform.*/
+
+const colorArr = ["red", "yellow", "blue", "green", "white", "black"];
+
+const [first, second] = colorArr;
+console.log(first, second);
+
+
+//Destructuring in Objects
+const freeCodeCamp = {
+  frontend: "React",
+  backend: "Node",
+  database: "MongoDB",
+};
+
+const { frontend: courseOne, backend: courseTwo } = freeCodeCamp;
+console.log(courseOne, courseTwo);
+
+</script>

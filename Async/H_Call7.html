@@ -1,0 +1,36 @@
+<script>
+
+function uploadVideo(callback){ 
+    console.log("Uploading Video...") 
+    setTimeout(()=>{ 
+        console.log("Video uploaded") 
+        callback() 
+    },4000) 
+} 
+function publishVideo(callback){ 
+    console.log("Publishing Video...") 
+    setTimeout(()=>{ 
+        console.log("Video published") 
+        callback() 
+    },4000) 
+} 
+ 
+ 
+function NotifyUser(){ 
+    console.log("Video Notification sent") 
+} 
+
+//CALLBACK AREA
+
+uploadVideo(function(){ 
+    publishVideo(function(){ 
+        NotifyUser() 
+    }) 
+})
+
+/*
+ when there is a network issue or any technical 
+issue the call back will wait until it receives a 
+result, that may lead to call back hell 
+*/
+</script>

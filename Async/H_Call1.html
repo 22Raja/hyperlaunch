@@ -1,0 +1,32 @@
+<script>
+/*
+In JavaScript, a callback is a function passed into another function as an argument to be executed later.
+*/
+var ages = [32, 33, 16, 40];//array object
+
+//checkAdult is a callback function
+function checkAdult(age)
+{
+console.log("Age?? "+age + " "+(age>=18));
+  return age >= 18;
+}
+/*
+When you pass a callback function into another function, you just pass the
+ reference of the function i.e., the function name without the parentheses ().
+*/
+//filter is a built in function of Array object
+console.log("Age>18::   "+ages.filter(checkAdult));//callback used
+
+
+let numbers = [1, 2, 4, 7, 3, 5, 6];
+
+//callback function
+function isOddNumber(number)
+ {
+console.log("ISODD? "+number+ " "+number%2);
+    return number % 2;
+}
+let oddNumbers = numbers.filter(isOddNumber);//array.filter
+console.log("Odd: "+oddNumbers);
+
+</script>

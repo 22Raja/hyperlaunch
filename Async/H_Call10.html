@@ -1,0 +1,45 @@
+<script>
+/*
+1. Using Promise.all: 
+Promise.all is used when you want to run 
+multiple asynchronous operations in parallel and 
+wait for all of them to complete. If any of the 
+promises fail (i.e., get rejected), the entire 
+Promise.all will be rejected. 
+Example: Uploading Multiple Videos 
+Suppose we want to upload multiple videos 
+simultaneously and only proceed when all videos 
+are successfully uploaded: 
+*/
+
+// Simulate video upload with promise 
+function uploadVideo(videoName) { 
+return new Promise((resolve, 
+reject) => { 
+console.log(`Uploading ${videoName}...`); 
+setTimeout(() => { 
+console.log(`${videoName} uploaded`); 
+resolve(videoName); 
+}, 2000); 
+}); 
+} 
+
+// Using Promise.all to upload multiple videos in parallel 
+
+Promise.all([uploadVideo("Video1"), uploadVideo("Video 2"),uploadVideo("Video 3")]) 
+
+.then((results) => { 
+console.log("All videos uploaded:", results); 
+console.log("Publishing videos..."); 
+// Now, publish the videos or notify the user 
+}) 
+.catch((error) => { 
+console.error("An error occurred while uploading videos:", error); 
+}); 
+
+/*
+Promise.all takes an array of promises and resolves when all of them are completed. 
+
+If any of the uploads fail, the catch block will be triggered, and it won’t proceed further.
+*/
+</script>

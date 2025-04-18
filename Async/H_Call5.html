@@ -1,0 +1,49 @@
+<script>
+/*
+Immediately Invoked Function Expressions (IIFE) are JavaScript functions that are executed immediately after
+ they are defined. 
+They are typically used to create a local scope for variables to prevent them from polluting the global scope.
+
+Syntax:
+
+(function (){ 
+// Function Logic Here. 
+})();
+*/
+
+/*
+IIFEs are commonly used to create private scope in JavaScript, allowing variables and functions to be encapsulated and 
+inaccessible from outside the function.
+
+It is also known as a self-executing anonymous function. 
+*/
+
+/*
+IIFE's are used to define and execute functions on fly and use them on the spot without extra line of Code.
+A normal function simply includes a declaration and a definition but
+ an IIFE is declaration, definition and invocation at the same time
+*/
+
+var result = (function() {
+    var x = 10;
+    var y = 20;
+    return x + y;
+})();
+
+ 
+console.log(result);
+
+
+(function()  
+ {  
+ console.log("Hello World");   
+})();  
+
+
+(function (x, y, z) {  
+   console.log(x);  
+   console.log(y);  
+   console.log(z);  
+ })(100, 200, 300);  
+
+</script>

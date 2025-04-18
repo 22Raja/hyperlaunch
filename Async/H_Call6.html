@@ -1,0 +1,38 @@
+<script>
+
+function greet(name, callback) { 
+console.log(`Hello, ${name}!`); 
+callback(); 
+} 
+function sayGoodbye() { 
+console.log("Goodbye!"); 
+} 
+
+greet("Thananya", sayGoodbye);
+
+//When Callbacks are not used:
+
+function uploadVideo(){ 
+    console.log("Uploading Video...") 
+    setTimeout(()=>{ 
+        console.log("Video uploaded") 
+    },4000) 
+} 
+function publishVideo(){ 
+    console.log("Publishing Video...") 
+    setTimeout(()=>{ 
+        console.log("Video published") 
+    },4000) 
+} 
+function NotifyUser(){ 
+    console.log("Video Notification sent") 
+} 
+uploadVideo() 
+publishVideo() 
+NotifyUser() 
+
+
+//ABOVE is not the correct order , so let us use callbacks
+
+
+</script>

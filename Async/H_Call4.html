@@ -1,0 +1,25 @@
+<script>
+/*
+Template Literals
+String Interpolation=>${}
+*/
+var customer = { name: "Thananya" }
+var card = { amount: 7, product: "Laptop", unitprice: 99000 }
+var message = `Hello ${customer.name},want to buy ${card.amount} ${card.product} for a total of ${card.amount * card.unitprice} bucks?`
+alert(message)
+
+
+var arr = ['a', 'b', 'c'];
+//In ES5, you have the option of using the Array method forEach():
+
+arr.forEach(function (elem) {
+    console.log(elem);
+});
+
+//If you want both index and value of each array element, for-of has got the new Array method entries() and destructuring:
+
+for (let [index11, elem11] of arr.entries()) {
+    console.log(index11+'. '+elem11);
+}
+
+</script>

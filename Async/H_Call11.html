@@ -1,0 +1,67 @@
+<script>
+/*
+ Using Promise.any: 
+Promise.any is useful when you want to run 
+multiple asynchronous operations in parallel and 
+only need one of them to succeed. It resolves as 
+soon as any of the promises is fulfilled, ignoring 
+the rest. If all the promises fail, it rejects with an 
+AggregateError. 
+Example: Video Upload with Multiple Servers 
+Let's say we have multiple video servers, and we 
+want to upload the video to whichever server 
+responds the fastest: 
+*/
+
+// Simulate video upload to multiple servers with promise 
+function uploadToServer(serverName) 
+{ 
+return new Promise((resolve,reject) => { 
+const uploadTime = Math.floor(Math.random() * 3000) +1000; // Random delay between 1-4seconds 
+console.log(`Uploading to ${serverName}...`); 
+setTimeout(() => { 
+if (uploadTime < 2500) { //Simulating success for fasteruploads 
+console.log(`Video uploaded successfully to ${serverName}`); 
+resolve(`Success: ${serverName}`); 
+} 
+else 
+{ 
+console.log(`Failed to upload to ${serverName}`); 
+reject(`Error: ${serverName}`); 
+} 
+}, uploadTime); 
+}); 
+} 
+
+// Using Promise.any to upload to multiple servers and pick the fastest one 
+Promise.any([uploadToServer("Server 1"), uploadToServer("Server 2"), uploadToServer("Server 3")]) 
+.then((result) => { 
+console.log("Uploaded video to the fastest server:", result); 
+// Notify user about successful upload 
+}) 
+.catch((error) => { 
+console.error("All servers failed to upload:", error.errors); 
+});
+ 
+/*
+Promise.any takes an array of promises 
+and resolves as soon as the first promise is 
+fulfilled. 
+If all promises are rejected (e.g., all servers 
+fail), it throws an AggregateError 
+containing details of all the rejected promises.
+*/
+
+/*
+Summary: 
+ 
+Use Promise.all when you want to wait 
+for all operations to complete successfully 
+before proceeding. 
+ 
+Use Promise.any when you want to 
+proceed as soon as any one of the operations 
+completes successfully, ignoring failures in 
+others.
+*/
+</script>

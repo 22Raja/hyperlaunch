@@ -1,0 +1,28 @@
+<script>
+/*
+ If we want to execute a function right after the return of some other function, then callbacks can be used.
+*/
+function add(a, b , mycallback)
+{ 
+   console.log(`The sum of ${a} and ${b} is ${a+b}`); 
+   mycallback(); 
+   } 
+     
+   // mycallback() function is called just 
+   // after the ending of add() function  
+   function mycallback()
+{ 
+   console.log('This must be printed after addition'); 
+   } 
+     
+   // Calling add() function 
+  add(5,6,mycallback);//calling - 1
+
+
+//anonymous function
+   add(10,10,function mycallback()//calling - 2
+{ 
+   console.log('Callback Loaded'); 
+   }); 
+
+</script>
