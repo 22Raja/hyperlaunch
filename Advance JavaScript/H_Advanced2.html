@@ -1,0 +1,71 @@
+<!-- var is function scope, and let and const are block scope
+var can be duplicated but let cannot be declared more than once.
+Default is var keyword for variable declaration.
+
+What is Hoisting?
+
+JavaScript moves declarations (var, function) to the top.
+
+Variables: Hoisted but initialized as undefined.
+
+Functions: Fully hoisted (can be called before declaration).
+
+"Temporal Dead Zone (TDZ) with let & const"::
+
+Variables declared with let/const are hoisted but not initialized.
+
+Accessing them before declaration throws ReferenceError.
+-->
+<script>
+var a=100;
+console.log("var: "+a); 
+var a =10;
+console.log("var1: "+a); 
+  if(true)
+  {
+   var a=120;
+   console.log("var(inside block):"+a);
+  }
+  console.log("var(after block):"+a);//latest value
+
+  let b =101;
+ console.log(b); 
+//  let b =101;//error--cannt be duplicated
+
+//var b=100;//error-- already in let
+
+  let a1 =100;
+  console.log("log:"+a1);
+  if(true)
+  {
+   let a1=200;
+   console.log("log(inside block):"+a1);//let variable duplicated but block level!!!
+   }
+  console.log("log(after block):"+a1);
+
+
+// calling var z before definition will return undefined 
+        console.log(z); //variable hoisting
+        var z = 2; 
+
+        //calling let a before definition will give error 
+       // console.log(a11); 
+        //let a11 = 3; 
+
+
+for(let i=0;i<4;i++)
+{
+console.log(i); //i is visible 
+}
+console.log("Outside for loop",i); //throws an error as "i is not defined" because i is not visible
+
+for(var i=0; i<4; i++)
+{
+console.log(i); //i is visible 
+}
+console.log("Outside for loop ",i); //i is visible here too. 
+console.log("Outside for loop ",i); //i is visible here too. 
+console.log("Outside for loop ",i); //i is visible here too. 
+
+
+</script>

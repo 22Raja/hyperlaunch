@@ -1,0 +1,128 @@
+<script>
+
+/*
+
+A nested function (also known as an inner function) is a function that is declared within 
+another function (known as the outer function). 
+The inner function has access to the variables of its outer function, forming a lexical scope chain.
+
+How nested functions work in JavaScript
+A nested function is a function defined inside another function in JavaScript.
+The inner function has access to the variables and parameters of the outer function.
+The inner function can be called only from within the outer function.
+Nested functions allow for better organization and code reuse.
+They enable closures, where the inner function can “remember” and access variables 
+from the outer function even after the outer function has finished executing.
+*/
+
+function outer1() {
+    console.log('This is the outer function')
+    function inner1() {
+        console.log("This is the inner function.")
+    }
+    inner1();
+}//closing of outer function
+outer1(); 
+
+function outer2(a, b) {
+    function inner2() {
+        return a + b;
+    }
+    console.log("Result: "+inner2());
+}
+outer2(2, 3);
+
+/*
+Returning an Inner Function (Closure)
+Nested functions can return inner functions, creating closures that “remember” the outer function’s scope.
+*/
+
+/*Closure:
+Nested functions create closures, allowing inner functions to "remember" the environment in which they were created. 
+This enables them to access variables from their containing functions even after the outer function has finished executing.
+*/
+function outerClosure() {
+
+  let outerVar = 'I am from outer closure';
+
+  function innerClosure() {
+
+    console.log(outerVar); // Accessing outer variable even after outer function finishes
+
+  }
+
+  return innerClosure;
+
+}
+
+const closureFunction = outerClosure();
+
+closureFunction(); // Output: I am from outer closure
+/*
+Use Cases:
+
+Information Hiding: Keeping variables private within a function, revealing only what is necessary.
+Modularity: Breaking down complex tasks into smaller, more manageable functions.
+Callbacks: Passing functions as arguments to other functions.
+*/
+
+
+//Nested Functions with Multiple Arguments
+
+function outer(x, y) {
+    function inner(a, b) {
+        return a * b + x + y;
+    }
+    return inner(3, 4);
+}
+
+console.log("Nested function with multiple argument: "+outer(2, 5));
+
+/*
+Nested Functions for Encapsulation
+Nested functions can also be used for encapsulating logic and keeping variables private within the outer function’s scope.
+
+*/
+
+function counter() {
+    let count = 0;
+    function increment() {
+        count += 1;
+        return count;
+    }
+    return increment;
+}
+
+const myCounter = counter();
+console.log(myCounter());
+console.log(myCounter());
+/*
+The counter() function defines a local variable count and an inner function increment().
+The increment() function increases count by 1 every time it’s called and returns the updated value of count.
+When counter() is called, it returns the increment() function, which is assigned to myCounter.
+Each time myCounter() is called, it increments the count and returns the updated value, printing 1 and then 2 to the console.
+*/
+/*
+Benefits of Using Nested Functions:
+
+Encapsulation: Inner functions help in structuring the code by
+ keeping helper functions private and preventing unwanted access.
+Code Organization: They help break down large functions into 
+smaller, manageable units.
+Access to Outer Variables: Inner functions can access the variables and 
+parameters of their outer function due to lexical scoping.
+Avoiding Global Pollution: Since inner functions are not accessible 
+outside their outer function, they do not interfere with the global scope.
+
+Limitations of Nested Functions:
+
+Memory Usage: Since inner functions maintain references to outer function variables,
+ they may consume memory even after the outer function execution completes.
+Performance Impact: Defining a function inside another function means a new function is created
+ every time the outer function is called, which can lead to performance inefficiencies in high-frequency executions.
+Code Complexity: Excessive nesting can make the code harder to read and debug.
+*/
+
+
+
+</script>

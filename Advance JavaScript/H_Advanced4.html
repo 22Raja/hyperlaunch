@@ -1,0 +1,37 @@
+<script>
+function validfun()
+{
+/*
+\d	matches any digit character. Same as [0-9]
+\D	Matches any non-digit character. Same as [^0-9]
+*/
+  var phoneno = /^\d{10}$/;
+  if(form1.text1.value.match(phoneno))
+  {
+alert("1.PhoneNumber format valid!");
+  }
+  else
+  {
+     alert("1.Not a valid Phone Number");
+  }
+
+var phoneno1 = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  if(form1.text2.value.match(phoneno1))
+        {
+alert("2.Valid Format!");
+        }
+      else
+        {
+        alert("2.XXX-XXX-XXXX	 XXX.XXX.XXXX 	XXX XXX XXXX");
+        }
+return true;
+}
+</script>
+
+<h2>Input an Phone No.[xxxxxxxxxx] and Submit</h2>
+<form name="form1" action="" method=post  onsubmit="return validfun()">
+<input type='text' name='text1'/><br>
+<br>
+<input type='text' name='text2'/><br>
+<input type="submit" name="submit" value="Submit"/>
+</form>

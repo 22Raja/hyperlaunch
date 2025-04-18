@@ -1,0 +1,87 @@
+1. Closure Counter
+Task:
+Create a function createCounter() that returns a counter function. The counter should increment by 1 each time it's called.
+
+2. Private Variable with Closure
+Task:
+Create a function createBankAccount(initialBalance) that:
+    • Stores initialBalance privately.
+    • Returns an object with methods deposit(amount) and getBalance().
+
+3. Hoisting Puzzle
+Task:
+Predict the output of this code and explain:
+Copy
+console.log(x);
+var x = 5;
+function foo() { console.log("Hello!"); }
+foo();
+Expected Output:
+Copy
+undefined
+Hello!
+
+4. IIFE for Data Privacy
+Task:
+Use an IIFE to create a module that stores a private variable secret and exposes a getSecret() function.
+
+5. Currying: Multiply Function
+Task:
+Convert multiply(a, b) into a curried function multiply(a)(b).
+
+6. Array Method: Sum of Squares
+Task:
+Given an array [1, 2, 3], use map() and reduce() to compute the sum of squares.
+
+7. Filter and Map Chaining
+Task:
+Given an array of users:
+const users = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 17 },
+  { name: "Charlie", age: 30 }
+];
+Return names of users older than 18.
+Example Output:
+Copy
+["Alice", "Charlie"]
+
+8. Block Scope Puzzle
+Task:
+What is the output of this code?
+Copy
+let x = 10;
+if (true) {
+  let x = 20;
+  console.log(x);
+}
+console.log(x);
+
+9. Advanced Reduce: Group by Age
+Task:
+Given an array of people:
+const people = [
+  { name: "Alice", age: 25 },
+  { name: "Bob", age: 25 },
+  { name: "Charlie", age: 30 }
+];
+Group them by age into an object like this:
+Copy
+{
+  "25": ["Alice", "Bob"],
+  "30": ["Charlie"]
+}
+
+10. Closure + Event Listener
+Task:
+Create a button click counter using closures. Each button click should log the number of clicks.
+Example:
+Clicked 1 times
+Clicked 2 times
+
+11.Bonus: Real-World Use Case
+Question:
+How would you use closures to debounce a search input (e.g., delay API calls until typing stops)?
+Hint:
+    • Use setTimeout and clearTimeout inside a closure.
+=====================================================

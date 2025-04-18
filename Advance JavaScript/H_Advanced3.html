@@ -1,0 +1,208 @@
+<script language="javascript">
+//form validation
+function verify1()
+{
+if(document.form1.u1.value=="")
+{
+alert("please enter username");
+document.form1.u1.focus();
+return false;
+}
+if(document.form1.p1.value=="")
+{
+alert("please enter password");
+document.form1.p1.focus();
+return false;
+}
+if(document.form1.p1.value.length < 6)
+{
+alert("Min password length is 6");
+document.form1.p1.focus();
+return false;
+}
+if(document.form1.p2.value=="" ||
+(document.form1.p2.value!=document.form1.p1.value))
+{
+alert("Please enter confirm password or both Password remains same");
+document.form1.p2.focus();
+return false;
+}
+var checked=false;
+for (i=0; i<document.form1.c1.length; i++)//4 checkboxes
+{
+if (document.form1.c1[i].checked)
+{
+checked=true;
+}
+}
+if(!checked)//true
+{
+alert('Please select your qualification');
+return false;
+}
+if((document.form1.g1[0].checked==false) && (document.form1.g1[1].checked==false))
+{
+alert ('Please choose your gender');
+return false;
+}
+if(document.form1.s1.selectedIndex==0)
+{
+alert('Please select your location');
+document.form1.s1.focus();
+return false;
+}
+var i;
+var numSelected = 0;
+for (i = 0;  i < document.form1.s1.length;  i++)
+{
+if (document.form1.s1.options[i].selected)
+numSelected++;
+}
+
+if (numSelected < 2)
+{
+alert("Please select atleast two locations");
+document.form1.s1.focus();
+return false;
+}
+if (numSelected >=3)
+{
+alert("Please select only two locations");
+document.form1.s1.focus();
+return false;
+}
+if(document.form1.y1.selectedIndex==0)
+{
+alert('Please select the FROM field');
+document.form1.y1.focus();
+return false;
+}
+
+if(document.form1.y2.selectedIndex==0)
+{
+alert('Please select the TO field');
+document.form1.y2.focus();
+return false;
+}
+// require that the To Field be greater than or equal to the From Field
+var chkVal = form1.y2.value;
+var chkVal2 = form1.y1.value;
+if (chkVal != "" && !(chkVal >= chkVal2))
+{
+alert("The \"To\" value must be greater than or equal to (>=) the \"From\" value.");
+form1.y2.focus;
+return (false);
+}
+if(document.form1.e1.value=="")
+{
+alert("Please enter your email id");
+document.form1.e1.focus();
+return false;
+}
+if(document.form1.t1.value=="")
+{
+alert("Please enter your address");
+document.form1.t1.focus();
+return false;
+}
+var x="Name: "+document.form1.u1.value;
+x+="Password: "+document.form1.p1.value;
+x+="Qualification: ";
+for (i=0; i<document.form1.c1.length; i++)
+{
+if (document.form1.c1[i].checked==true)
+{
+x+=" " + document.form1.c1[i].value;
+}
+}
+x+="Gender: ";
+for (i=0; i<document.form1.g1.length; i++)
+{
+if (document.form1.g1[i].checked==true)
+{
+x+=" " + document.form1.g1[i].value;
+}
+}
+x+="Locations: ";
+for (i=0;i<document.form1.s1.options.length;i++) 
+{
+    if (form1.s1.options[i].selected==true) 
+    {
+       x+= " "+document.form1.s1[i].value;
+    }
+}
+x+="From: "+document.form1.y1.value;
+x+="To: "+document.form1.y2.value;
+x+="Email id: "+document.form1.e1.value;
+x+="Address: "+document.form1.t1.value;
+alert(x);
+document.write(x);
+console.log(x);
+
+return true;//after all the validations are completed successfully, then return true!!!!
+}
+
+</script>
+
+
+<body>
+<form name="form1" method=post action="" onsubmit="return verify1()">
+Username:<input type=text name="u1"><p>
+Password:<input type=password name="p1"><p>
+Confirm Password:<input type=password name="p2"><p>
+Qualification:
+<input type=checkbox name="c1" value="M.C.A">M.C.A
+<input type=checkbox name="c1" value="M.B.A">M.B.A
+<input type=checkbox name="c1" value="M.SC">M.SC
+<input type=checkbox name="c1" value="M.E">M.E
+<p>
+Gender:
+<input type=radio name=g1 value="Male">Male
+<input type=radio name=g1 value="Female">Female
+<p>
+Location::
+<select name="s1"  multiple>
+<option value selected>-- SELECT --</option>
+<option value=Chennai>Chennai</option>
+<option value=Kerela>Kerela</option>
+<option value=Bangalore>Bangalore</option>
+<option value=Noida>Noida</option>
+<option value=Pune>Pune</option>
+<option value=Gurgaon>Gurgaon</option>
+</select>
+<p>
+Working Experience:
+From:
+<select name="y1">
+<option value selected>--SELECT--</option>
+<option value=2005>2005</option>
+<option value=2006>2006</option>
+<option value=2007>2007</option>
+<option value=2008>2008</option>
+<option value=2009>2009</option>
+<option value=2010>2010</option>
+<option value=2011>2011</option>
+<option value=2012>2012</option>
+</select>
+To:
+<select name="y2">
+<option value selected>--SELECT--</option>
+<option value=2005>2005</option>
+<option value=2006>2006</option>
+<option value=2007>2007</option>
+<option value=2008>2008</option>
+<option value=2009>2009</option>
+<option value=2010>2010</option>
+<option value=2011>2011</option>
+<option value=2012>2012</option>
+</select>
+<p>
+Email: <input type=email name="e1">
+</p>
+<p>
+Address:
+<textarea name="t1" rows=5 cols=25></textarea>
+<p>
+<input type="submit" value="Sign In">
+</form>
+</body>
